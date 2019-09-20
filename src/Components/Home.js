@@ -1,11 +1,18 @@
 import React from 'react'
 import Title from './Title'
+import Filter from './Filter'
+import SelectRecipe from './SelectRecipe'
+import FeaturedRecipes from './FeaturedRecipes'
+import Footer from './Footer'
 
-const Home = () => {
+const Home = ( {recipes} ) => {
     return (
-        <div>
+        <div id='mainSection'>
             <Title name='Recipes' />
-            <p>Home Page</p>
+            <Filter />
+            <SelectRecipe recipes={recipes} />
+            <FeaturedRecipes />
+            <Footer />
         </div>
     )
 }
